@@ -71,6 +71,10 @@ else ifeq ($(platform), miyoomini)
 	LDFLAGS += -fPIC -lmi_sys -lmi_gfx
 	MMENU=1
 	PATCH=patch
+else ifeq ($(platform), pb)
+	SOURCES += plat_pb.c
+	CFLAGS += -DCONTENT_DIR='"/mnt"' -march=mips32r2 -mhard-float
+	LDFLAGS += -fPIC
 else ifeq ($(platform), unix)
 	OBJS += plat_linux.o
 	LDFLAGS += -fPIE
