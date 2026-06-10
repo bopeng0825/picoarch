@@ -1,8 +1,8 @@
 #ifndef __SCALE_H__
 #define __SCALE_H__
 
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
+#define SCREEN_WIDTH 1280
+#define SCREEN_HEIGHT 720
 #define SCREEN_BPP 2
 #define SCREEN_PITCH (SCREEN_BPP * SCREEN_WIDTH)
 
