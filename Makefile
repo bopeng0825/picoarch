@@ -72,7 +72,7 @@ else ifeq ($(platform), miyoomini)
 	MMENU=1
 	PATCH=patch
 else ifeq ($(platform), pb)
-	SOURCES += plat_pb.c
+	SOURCES += plat_pb.o
 	CFLAGS += -DCONTENT_DIR='"/mnt"' -march=mips32r2 -mhard-float
 	LDFLAGS += -fPIC
 else ifeq ($(platform), unix)
@@ -128,6 +128,7 @@ clean-libpicofe:
 
 plat_miyoomini.o: plat_sdl.c
 plat_trimui.o: plat_sdl.c
+plat_pb.o:plat_sdl.c
 plat_linux.o: plat_sdl.c
 
 $(BIN): libpicofe/.patched $(OBJS)
